@@ -189,8 +189,8 @@ def play_turn(players, played_cards, previous_card):
         wait(0.8)
         typingprint(f"{YELLOW}{BOLD}No cards have been played yet.{END}")
         typingprint(f"{BLUE}{UNDERLINE}Anyone can play a card at any time.{END}")
-        
-    
+
+
 
     player = get_valid_player(players, played_cards)
     chosen_card = get_valid_card(player, played_cards)
@@ -276,7 +276,7 @@ def styled_start_game():
     else:
         typingprint(f"{RED}{BOLD}Invalid input!{END}")
         return styled_start_game()
-    
+
     typingprint(f"{GREEN}Okay, let's start the game!{END}")
     wait(0.5)
 
@@ -287,7 +287,7 @@ def styled_start_game():
             command = num_players_input[2:]
             execute_dev_command(command, [], [])
             continue
-            
+
         if not num_players_input.isdigit() or not (2 <= int(num_players_input)
                                                    <= 4):
             typingprint(

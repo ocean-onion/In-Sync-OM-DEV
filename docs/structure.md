@@ -20,7 +20,7 @@ In-Sync-DEV/
 │
 ├── drafts/               # Previous code versions
 │   ├── draft*.py         # Draft code verisons
-│   └── draft14.py        # Current implementation
+│   └── draft15.py        # Current implementation
 │
 │
 ├── games/                # Game implementations
@@ -28,10 +28,13 @@ In-Sync-DEV/
 │   ├── styledgame.py     # Styled version with colours
 │   └── testfunc.py       # Testing functions
 │
+├── unused/               # Unused/unfinished tests/features
+│   └── tests*.py         # Individual testing 
 │
 ├── utils/                # Utility functions
+│   ├── logo.py           # Ocean-onion logo
 │   ├── tools.py          # Developer commands
-│   └── utilities.py       # Shared utility functions
+│   └── utilities.py      # Shared utility functions
 │
 │
 ├── LICENSE               # License
@@ -44,6 +47,7 @@ In-Sync-DEV/
 - **main.py**: Entry point for the application allowing choice between styled and plain versions
 - **games/plaingame.py**: Implementation with plain text (no styling)
 - **games/styledgame.py**: Implementation with styled text (colours and effects)
+- **utils/logo.py**: Prints out ocean-onion logo
 - **utils/utilities.py**: Shared utility functions used by both implementations
 - **utils/tools.py**: Developer commands for testing and debugging
 - **games/testfunc.py**: Testing utilities for individual functions
@@ -78,3 +82,4 @@ The game has evolved through ten drafts, with each version improving on the prev
 12. **Draft 12**: Improved game flow and readability
 13. **Draft 13**: Improved developer tools and game flow
 14. **Draft 14**: Added welcome message and loading screens
+15. **Draft 15**: Added Logo and introduction, unified game UI and improved game flow

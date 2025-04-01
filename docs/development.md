@@ -7,8 +7,11 @@ This document tracks the progress of "In Sync" card game implementation in Pytho
 ## [The Game Concept](https://github.com/ocean-onion/In-Sync-OM-DEV/blob/main/docs/plan.md)
 
 ## Utils
-### Developer Commands (tools.py)
-- Developer Functions
+### Logo printer (logo.py)
+- Logo functions
+
+### Developer commands (tools.py)
+- Developer functions
 
 ### Utility functions (utilities.py)
 - Styling functions
@@ -342,5 +345,24 @@ This document tracks the progress of "In Sync" card game implementation in Pytho
 <summary>View Code</summary>
 
 [Draft 14](https://github.com/ocean-onion/In-Sync-OM-DEV/tree/main/drafts/0.3.*/draft14.py)
+
+</details>
+
+## Draft 15
+
+### 0.4.0
+---
+
+#### Key improvements:
+
+1. **Improved Game Flow**: Changed timing for different prompts, and removed unnecessary typing
+2. **Improved Game Start**: Added Better welcome and loading screens and added an introduction function
+
+### Complete Code for Draft 15
+
+<details>
+<summary>View Code</summary>
+
+[Draft 15](https://github.com/ocean-onion/In-Sync-OM-DEV/tree/main/drafts/0.4.*/draft15.py)
 
 </details>
