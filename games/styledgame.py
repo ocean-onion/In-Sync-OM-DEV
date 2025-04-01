@@ -1,4 +1,4 @@
-'''Import all nessarcy functions from libaries.'''
+'''Import all nessarcy functions from libaries.''' # remove in public
 import random
 from utils.utilities import colourprint, colourprint_nl, typingprint, typinginput, cards, clear, wait, instructions, color, countdown, colourinput, typingprint_nl, shuffle_screen
 from utils.tools import execute_dev_command
@@ -44,24 +44,30 @@ def prepare_game_deck(num_players):
 def create_players(num_players):
     players = []
     typingprint(f"{DARKBLUE}Let's get to know the players!{END}")
-    '''This for loop takes the number of players from the start_game function and repeats its self until all the players are added to the list. But before that it checks if the names start with "!?" as that prompts the program to check for a dev command this must come first as if it doesn't the program will add the dev command to the player list.'''
+    wait(0.8)
+    '''This for loop takes the number of players from the start_game function and repeats its self until all the players are added to the list. But before that it checks if the names start with "!?" as that prompts the program to check for a dev command this must come first as if it doesn't the program will add the dev command to the player list.''' #remove in public
     for i in range(num_players):
         while True:
+            wait(0.8)
+            clear()
             name = typinginput(
                 f"{BLUE}Enter the name of Player {i + 1}: {END}")
-            if name.startswith("!?"):
+            if name.startswith("!?"): # remove in public
                 command = name[2:]
                 execute_dev_command(command, [], [] if i == 0 else players)
                 continue
             if name.strip():
                 break
             typingprint(f"{RED}Name cannot be empty. Please try again.{END}")
+        clear()
         typingprint(f"{GREEN}Welcome to the game, {name}!{END}")
         players.append({"name": name, "deck": []})
-        wait(0.3)
+        wait(0.8)
     return players
 
-'''This function is used to deal the cards to the players. It checks the game deck and then deals the cards to the players. and also make sures that they're are not cards left in the game deck.'''
+
+'''This function is used to deal the cards to the players. It checks the game deck and then deals the cards to the players. and also make sures that they're are not cards left in the game deck.''' # remove in public
+
 
 def deal_cards(game_deck, players, cards_per_player):
     clear()
@@ -69,7 +75,7 @@ def deal_cards(game_deck, players, cards_per_player):
         f"{CYAN}Now we have all {len(players)} players. Lets deal the cards.{END}"
     )
     clear()
-    shuffle_screen()            
+    shuffle_screen()
     for i in range(cards_per_player):
         for player in players:
             if game_deck:
@@ -108,11 +114,17 @@ def check_user_deck(player, card):
     clear()
     return False
 
-'''This function gets all the cards in a user deck and then just reutrns that value it is then used to check if the user has the card they want to use.'''
+
+'''This function gets all the cards in a user deck and then just reutrns that value it is then used to check if the user has the card they want to use.''' # remove in public
+
+
 def get_all_remaining_cards(players):
     return [card for player in players for card in player["deck"]]
 
-'''This function is used to check if the card that is played is the lowest possible card in the game. With this function the game could be played out of order and will crash the game.''' 
+
+'''This function is used to check if the card that is played is the lowest possible card in the game. With this function the game could be played out of order and will crash the game.''' # remove in public
+
+
 def check_lowest_possible(players, played_card):
     remaining_cards = get_all_remaining_cards(players)
     if not remaining_cards:
@@ -137,7 +149,7 @@ def get_valid_player(players, played_cards=None):
     wait(0.3)
     chosen_player = colourinput(f"{DARKBLUE}Enter your name: {END}")
 
-    if chosen_player.startswith("!?"):
+    if chosen_player.startswith("!?"): # remove in public
         command = chosen_player[2:]
         execute_dev_command(command, players,
                             played_cards if played_cards else [])
@@ -160,7 +172,7 @@ def get_valid_card(player, played_cards=None):
     wait(0.3)
     chosen_card_input = colourinput(f"{CYAN}Choose a card to play: {END}")
 
-    if chosen_card_input.startswith("!?"):
+    if chosen_card_input.startswith("!?"): # remove in public
         command = chosen_card_input[2:]
         execute_dev_command(command, [], played_cards if played_cards else [])
         return get_valid_card(player, played_cards)
@@ -179,18 +191,19 @@ def get_valid_card(player, played_cards=None):
 
 def play_turn(players, played_cards, previous_card):
     clear()
+    '''This if statement check if a card was placed in the game. If one has been placed it uses colourprint instead of typingprint to improve the speed of the game.''' # remove in public
     if previous_card is not None:
         wait(0.3)
         colourprint_nl(
             f"{BLUE}Previous card played was:{END} {YELLOW}{previous_card}{END}"
         )
-        colourprint(f"{BLUE}{UNDERLINE}Anyone can play a card at any time.{END}")
+        colourprint(
+            f"{BLUE}{UNDERLINE}Anyone can play a card at any time.{END}")
     else:
         wait(0.8)
         typingprint(f"{YELLOW}{BOLD}No cards have been played yet.{END}")
-        typingprint(f"{BLUE}{UNDERLINE}Anyone can play a card at any time.{END}")
-        
-    
+        typingprint(
+            f"{BLUE}{UNDERLINE}Anyone can play a card at any time.{END}")
 
     player = get_valid_player(players, played_cards)
     chosen_card = get_valid_card(player, played_cards)
@@ -212,32 +225,45 @@ def play_turn(players, played_cards, previous_card):
         lowest_card = min(remaining_cards)
         correct_player = find_correct_player(players, lowest_card)
 
+        wait(1)
+        typingprint(f"{DARKBLUE}UH OH!{END}")
+        wait(0.5)
+        clear()
         colourprint(
             f"{RED}{BOLD}Wrong move! {player['name']} played an incorrect card. Game over.{END}"
         )
-        typingprint(
-            f"{YELLOW}The correct card to play was {BOLD}{lowest_card}{END}{YELLOW}, and it should have been played by {BOLD}{correct_player}{END}{YELLOW}.{END}"
-        )
-        cards_corretly_played = ", " .join([f'{YELLOW}{card}{END}' for card in played_cards])
-        typingprint_nl(
-            f"{DARKBLUE}Cards played in order before the error:{END} "
-        )
-        colourprint(f"{cards_corretly_played}")
-        return None
+        if played_cards is not None:
+            typingprint(
+                f"{YELLOW}The correct card to play was {BOLD}{lowest_card}{END}{YELLOW}, and it should have been played by {BOLD}{correct_player}{END}{YELLOW}.{END}"
+            )
+            cards_corretly_played = ", ".join(
+                [f'{DARKCYAN}{card}{END}' for card in played_cards])
+            typingprint_nl(
+                f"{DARKBLUE}Cards played in order before the error:{END} ")
+            colourprint(f"{cards_corretly_played}")
+            return None
+        elif played_cards is None:
+            typingprint(
+                f"{DARKCYAN}The correct card to play was {BOLD}{lowest_card}{END}{YELLOW}, and it should have been played by {BOLD}{correct_player}{END}{YELLOW}.{END}"
+            )
+            typingprint(f"{DARKBLUE}You lost on the first card. ˙◠˙{END}")
+            return None
+        else:
+            colourprint(f"{PURPLE}Something has gone very wrong!{END}")
 
 
 def game_loop(players):
     previous_card = None
     played_cards = []
-
+    '''This while checks if the game is over. By checking if there are any cards left in the decks of all the players.''' # remove in public
     while True:
         if all(len(player["deck"]) == 0 for player in players):
             typingprint(
                 f"{GREEN}{BOLD}Congratulations! You've successfully completed the game!{END}"
             )
             cards_display = ", ".join(
-                [f"{YELLOW}{card}{END}" for card in played_cards])
-            typingprint_nl(f"{CYAN}Cards played in order:{END} ") 
+                [f"{DARKCYAN}{card}{END}" for card in played_cards])
+            typingprint_nl(f"{DARKBLUE}Cards played in order:{END} ")
             colourprint(f"{cards_display}")
             break
 
@@ -260,11 +286,12 @@ def styled_start_game():
     clear()
     typingprint(f"{YELLOW}{BOLD}Welcome to the game{END}")
     typingprint(
-        f"{CYAN}In-Sync is a cooperative card game where timing is everything!{END}")
+        f"{CYAN}In-Sync is a cooperative card game where timing is everything!{END}"
+    )
     int_ask = typinginput(
         f"{DARKBLUE}Would you like the instructions? (y/n): {END}").lower()
 
-    if int_ask.startswith("!?"):
+    if int_ask.startswith("!?"): # remove in public
         command = int_ask[2:]
         execute_dev_command(command, [], [])
         return styled_start_game()
@@ -276,18 +303,19 @@ def styled_start_game():
     else:
         typingprint(f"{RED}{BOLD}Invalid input!{END}")
         return styled_start_game()
-    
+
     typingprint(f"{GREEN}Okay, let's start the game!{END}")
     wait(0.5)
 
     while True:
         num_players_input = typinginput(
             f"{BLUE}Enter the number of players (between 2 and 4): {END}")
-        if num_players_input.startswith("!?"):
+        clear()
+        if num_players_input.startswith("!?"): # remove in public
             command = num_players_input[2:]
             execute_dev_command(command, [], [])
             continue
-            
+
         if not num_players_input.isdigit() or not (2 <= int(num_players_input)
                                                    <= 4):
             typingprint(

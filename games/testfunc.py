@@ -1,10 +1,10 @@
-
+# remove in public
+import os
+import sys
 import games.plaingame as plaingame
 import games.styledgame as styledgame
 import utils.utilities as utilities
-from utils.utilities import clear, colourprint, color, wait
-import os, sys
-
+from utils.utilities import clear, color, wait
 
 def test_start_game():
     clear()
@@ -74,6 +74,7 @@ def test_start_game():
     function_name, function = functions[function_choice]
 
     print(f"\nRunning {function_name}...")
+    wait(0.3)
 
     if function_name == "typingprint" or function_name == "colourprint" or function_name == "typingprint_nl" or function_name == "colourprint_nl":
         text = input("Enter text to display: ")

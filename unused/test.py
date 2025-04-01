@@ -1,2 +1,3 @@
+# remove in public
 def hello():
-  print("help me.exe")
+  print("doom")

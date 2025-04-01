@@ -366,3 +366,22 @@ This document tracks the progress of "In Sync" card game implementation in Pytho
 [Draft 15](https://github.com/ocean-onion/In-Sync-OM-DEV/tree/main/drafts/0.4.*/draft15.py)
 
 </details>
+
+## Draft 16
+
+### 0.4.1
+---
+
+#### Key improvements:
+
+1. **Improved Game Flow**: Changed timing for different prompts, and finished unifying UI colours
+2. **Added other optimisations**: Made developer commands more accessable through out the program
+3. **Added comments**: Add more comments to explain functionalbilty through out the program
+### Complete Code for Draft 16
+
+<details>
+<summary>View Code</summary>
+
+[Draft 16](https://github.com/ocean-onion/In-Sync-OM-DEV/tree/main/drafts/0.4.*/draft16.py)
+
+</details>

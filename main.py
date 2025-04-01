@@ -1,9 +1,10 @@
 from games.plaingame import plain_start_game
-from games.styledgame import BLUE, BOLD, CYAN, DARKCYAN, END, GREEN, PURPLE, RED, YELLOW, styled_start_game
+from games.styledgame import BLUE, BOLD, DARKCYAN, END, GREEN, PURPLE, RED, YELLOW, styled_start_game
 from games.testfunc import test_start_game
-from utils.utilities import clear, colourprint, colourprint_nl, loading_screen, typinginput, typingprint, wait, loading_files_screen, acceptable
-from utils.logo import colored_logo, display_logo
-from unused.test2 import test2
+from utils.logo import display_logo
+from utils.tools import execute_dev_command # remove in public
+from utils.utilities import clear, colourprint, colourprint_nl, loading_screen, typinginput, typingprint, wait, loading_files_screen, acceptable # remove in public
+from unused.test2 import test2 # remove in public
 
 
 def welcome():
@@ -54,22 +55,26 @@ def welcome():
 
 
 def start_game():
-
+    clear()
     colourprint(
-        f"The options are {PURPLE}'{BOLD}S{END}{PURPLE}' for styled game{END} {GREEN}(Recommended){END}, {BLUE}'{BOLD}P{END}{BLUE}' for plain game,{END} or {YELLOW}'{BOLD}T{END}{YELLOW}' for test functions{END} {RED}(Boring unless dev){END}."
+        f"The options are {PURPLE}'{BOLD}S{END}{PURPLE}' for styled game{END} {GREEN}(Recommended){END}, {BLUE}'{BOLD}P{END}{BLUE}' for plain game,{END} {RED}(Maybe outdated){END} or {YELLOW}'{BOLD}T{END}{YELLOW}' for test functions{END} {RED}(Boring unless dev){END}."
     )
     game_choose = typinginput(
         f"{BOLD}{BLUE}Choose a game: {END}").lower().strip().replace(" ", "")
-    if game_choose == "p":
+    if game_choose.startswith("!?"): # remove in public
+        command = game_choose[2:]
+        execute_dev_command(command, [], [])
+        start_game()
+    elif game_choose == "p":
         clear()
         plain_start_game()
     elif game_choose == "s":
         clear()
         styled_start_game()
-    elif game_choose == "t":
+    elif game_choose == "t": # remove in public
         clear()
         test_start_game()
-    elif game_choose in acceptable:
+    elif game_choose in acceptable: # remove in public
         clear()
         wait(0.5)
         test2()
@@ -90,12 +95,16 @@ def introduction():
 
 
 def hello():
-    print("Hello, would you like to skip the introduction? (y/n)")
+    print("Hello, would you like the introduction (y/n)")
     skip_intro = input().lower()
-    if skip_intro == 'y':
-        start_game()
-    elif skip_intro == 'n':
+    if skip_intro.startswith("!?"): # remove in public
+        command = skip_intro[2:]
+        execute_dev_command(command, [], [])
+        hello()
+    elif skip_intro == 'y':
         introduction()
+    elif skip_intro == 'n':
+        start_game()
     else:
         print("Invalid input. Please enter 'y' or 'n'.")
         hello()

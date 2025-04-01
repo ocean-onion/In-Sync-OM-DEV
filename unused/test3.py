@@ -1,7 +1,10 @@
-
+# remove in public
 from utils.utilities import colourprint, color, wait, clear
+from main import hello
 
 art = """                                                                                                    
+
+
 
 
 
@@ -64,3 +67,6 @@ def doom():
   colourprint(f"{color.YELLOW}{color.BOLD}AND LISTEN TO MF DOOM!{color.END}")
   wait(3)
   colourprint(f"{color.DARKBLUE}spotify:playlist:1MTqVV0leA3p7VSNaqrOOg{color.END}")
+  wait(3)
+  clear()
+  hello()
