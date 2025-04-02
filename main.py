@@ -78,6 +78,7 @@ def start_game():
         clear()
         wait(0.5)
         test2()
+        hello()
     else:
         print("Invalid game choice.")
         wait(2)
