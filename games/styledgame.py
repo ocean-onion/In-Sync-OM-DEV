@@ -69,7 +69,7 @@ def create_players(num_players):
         clear()
         typingprint(f"{GREEN}Welcome to the game, {name}!{END}")
         players.append({"name": name, "deck": []})
-        wait(0.8)
+        wait(0.3)
 
     return players
 
