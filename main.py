@@ -57,7 +57,7 @@ def welcome():
 def start_game():
     clear()
     colourprint(
-        f"The options are {PURPLE}'{BOLD}S{END}{PURPLE}' for styled game{END} {GREEN}(Recommended){END}, {BLUE}'{BOLD}P{END}{BLUE}' for plain game,{END} {RED}(Maybe outdated){END} or {YELLOW}'{BOLD}T{END}{YELLOW}' for test functions{END} {RED}(Boring unless dev){END}."
+        f"The options are {PURPLE}'{BOLD}S{END}{PURPLE}' for styled game{END} {GREEN}(Recommended){END}, {BLUE}'{BOLD}P{END}{BLUE}' for plain game,{END} or {YELLOW}'{BOLD}T{END}{YELLOW}' for test functions{END} {RED}(Boring unless dev){END}."
     )
     game_choose = typinginput(
         f"{BOLD}{BLUE}Choose a game: {END}").lower().strip().replace(" ", "")
