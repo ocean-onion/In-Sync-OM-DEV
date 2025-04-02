@@ -1,6 +1,6 @@
 import random
 from utils.utilities import cards, plain_instructions, clear, wait
-from utils.tools import execute_dev_command
+from utils.tools import execute_dev_command # remove in public
 
 
 def prepare_game_deck(num_players):
@@ -25,7 +25,7 @@ def create_players(num_players):
     for i in range(num_players):
         while True:
             name = input(f"Enter the name of Player {i + 1}: ")
-            if name.startswith("!?"):
+            if name.startswith("!?"): # remove in public
                 command = name[2:]
                 execute_dev_command(command, [], [] if i == 0 else players)
                 continue
@@ -110,7 +110,7 @@ def play_card(player, card):
 def get_valid_player(players, played_cards=None):
     chosen_player = input("Enter your name: ")
 
-    if chosen_player.startswith("!?"):
+    if chosen_player.startswith("!?"): # remove in public
         command = chosen_player[2:]
         execute_dev_command(command, players,
                             played_cards if played_cards else [])
@@ -130,7 +130,7 @@ def get_valid_player(players, played_cards=None):
 def get_valid_card(player, played_cards=None):
     chosen_card_input = input("Choose a card to play: ")
 
-    if chosen_card_input.startswith("!?"):
+    if chosen_card_input.startswith("!?"): # remove in public
         command = chosen_card_input[2:]
         execute_dev_command(command, [], played_cards if played_cards else [])
         return get_valid_card(player, played_cards)
@@ -221,7 +221,7 @@ def plain_start_game():
     print("In-Sync is a cooperative card game where timing is everything!")
     int_ask = input("Would you like the instructions? (y/n): ").lower()
 
-    if int_ask.startswith("!?"):
+    if int_ask.startswith("!?"): # remove in public
         command = int_ask[2:]
         execute_dev_command(command, [], [])
         return plain_start_game()
@@ -241,7 +241,7 @@ def plain_start_game():
         num_players_input = input(
             "Enter the number of players (between 2 and 4): ")
         clear()
-        if num_players_input.startswith("!?"):
+        if num_players_input.startswith("!?"): # remove in public
             command = num_players_input[2:]
             execute_dev_command(command, [], [])
             continue
