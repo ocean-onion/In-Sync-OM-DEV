@@ -27,11 +27,17 @@ def create_players(num_players):
             name = input(f"Enter the name of Player {i + 1}: ")
             if name.startswith("!?"): # remove in public
                 command = name[2:]
-                execute_dev_command(command, [], [] if i == 0 else players)
+                execute_dev_command(command, [], players)
                 continue
-            if name.strip():
-                break
-            print("Name cannot be empty. Please try again.")
+            if not name.strip():
+                print("Invalid input! Name cannot be empty.")
+                continue
+            if name in [player["name"] for player in players]:
+                print("Name already taken!")
+                continue
+            break
+        
+        print("Name cannot be empty. Please try again.")
         players.append({"name": name, "deck": []})
     return players
 

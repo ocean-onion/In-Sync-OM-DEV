@@ -20,7 +20,7 @@ In-Sync-DEV/
 │
 ├── drafts/               # Previous code versions
 │   ├── draft*.py         # Draft code verisons
-│   └── draft16.py        # Current implementation
+│   └── draft17.py        # Current implementation
 │
 │
 ├── games/                # Game implementations
@@ -84,3 +84,4 @@ The game has evolved through ten drafts, with each version improving on the prev
 14. **Draft 14**: Added welcome message and loading screens
 15. **Draft 15**: Added Logo and introduction, started unified game UI and improved game flow
 16. **Draft 16**: Improved game flow, UI readablitiy and updated plain game
+17. **Draft 17**: Added better error handling and improved game flow
