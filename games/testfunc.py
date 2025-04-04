@@ -3,21 +3,29 @@ import os
 import sys
 import games.plaingame as plaingame
 import games.styledgame as styledgame
-import utils.utilities as utilities
+from utils import utilities, tools, logo
 from utils.utilities import clear, color, wait
 
 def test_start_game():
     clear()
     print("Function Testing Utility\n")
 
-    modules = {"1": plaingame, "2": styledgame, "3": utilities}
+    modules = {
+        "1": plaingame,
+        "2": styledgame,
+        "3": utilities,
+        "4": tools,
+        "5": logo
+    }
 
     print("Available Modules:")
     print("1: games.plaingame")
-    print("2: games.styledgame")
+    print("2: games.styledgame") 
     print("3: utils.utilities")
+    print("4: utils.tools")
+    print("5: utils.logo")
 
-    module_choice = input("\nSelect a module (1-3): ")
+    module_choice = input("\nSelect a module (1-5): ")
     if module_choice not in modules:
         print("Invalid choice!")
         return
@@ -30,27 +38,31 @@ def test_start_game():
     if module == plaingame:
         function_list = [
             "prepare_game_deck", "create_players", "deal_cards", "show_cards",
-            "check_user_deck", "get_all_remaining_cards",
-            "check_lowest_possible", "find_correct_player", "play_card",
-            "get_valid_player", "get_valid_card", "play_turn", "game_loop",
-            "restart_game", "plain_start_game", "about", "instructions",
-            "plain_instructions", "loading_screen"
+            "check_user_deck", "get_all_remaining_cards", "check_lowest_possible",
+            "find_correct_player", "play_card", "get_valid_player", "get_valid_card",
+            "play_turn", "game_loop", "restart_game", "plain_start_game"
         ]
     elif module == styledgame:
         function_list = [
             "prepare_game_deck", "create_players", "deal_cards", "show_cards",
-            "check_user_deck", "get_all_remaining_cards",
-            "check_lowest_possible", "find_correct_player", "play_card",
-            "get_valid_player", "get_valid_card", "play_turn", "game_loop",
-            "restart_game", "styled_start_game", "about", "instructions",
-            "loading_screen", "shuffle_screen"
+            "check_user_deck", "get_all_remaining_cards", "check_lowest_possible",
+            "find_correct_player", "play_card", "get_valid_player", "get_valid_card",
+            "play_turn", "game_loop", "restart_game", "styled_start_game"
         ]
     elif module == utilities:
         function_list = [
             "clear", "wait", "typingprint", "typingprint_nl", "colourprint",
-            "colourprint_nl", "typinginput", "instructions",
-            "plain_instructions", "apply_colors", "countdown", "loading_screen"
+            "colourprint_nl", "typinginput", "colourinput", "typingintructions",
+            "countdown", "instructions", "plain_instructions", "loading_screen",
+            "shuffle_screen", "loading_files_screen", "apply_colors"
         ]
+    elif module == tools:
+        function_list = [
+            "execute_dev_command", "players_list", "show_cards", 
+            "show_played_cards", "about", "show_all_info", "show_help"
+        ]
+    elif module == logo:
+        function_list = ["display_logo"]
 
     for i, name in enumerate(function_list, 1):
         if hasattr(module, name):

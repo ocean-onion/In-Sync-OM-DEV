@@ -298,7 +298,11 @@ def countdown(seconds):
         wait(1)
     clear()
 
-acceptable = ["mfdoom", "onebeer", "rapper", "mm..food", "mmfood", "doomsday", "allcap", "madvillian"] # Remove in public
+acceptabled = ["doom", "mfdoom", "onebeer", "rapper", "mm..food", "mmfood", "doomsday", "allcap", "madvillian", "supervillian", "kinggeedorah", "viktorvaughn", "kmd", "dangerdoom", "mfgrim"] # Remove in public
+
+acceptableuk = ["knucks", "knuckles", "knuckle", "alphahouse", "alphahouse", "badman", "boybetterknow", "bbk", "sketpa", "jme", "wasteman", "toomanyman", "atum", "dave", "aj", "ajtracey", "shutdown", "sainte", "rushy"] # Remove in public
+
+acceptablel = ["liam", "mackenzie", "lmackenzie", "cs", "cscience", "computerscience"] # Remove in public
 
 def instructions():
     wait(0.05)

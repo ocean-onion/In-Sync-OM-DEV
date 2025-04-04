@@ -385,6 +385,7 @@ This document tracks the progress of "In Sync" card game implementation in Pytho
 [Draft 16](https://github.com/ocean-onion/In-Sync-OM-DEV/tree/main/drafts/0.4.*/draft16.py)
 
 </details>
+
 ## Draft 17
 
 ### 0.4.2
@@ -393,7 +394,7 @@ This document tracks the progress of "In Sync" card game implementation in Pytho
 #### Key improvements:
 
 1. **Improved Game Flow**: Changed timing for different prompts
-2. **Added improved error handling**: Added new lines to create playes functionto make the checks more robust before adding the players to the game
+2. **Added improved error handling**: Added new lines to create playes function to make the checks more robust before adding the players to the game
 3. **Added comments**: Add more comments to explain functionalbilty through out the program
 ### Complete Code for Draft 17
 
@@ -401,5 +402,27 @@ This document tracks the progress of "In Sync" card game implementation in Pytho
 <summary>View Code</summary>
 
 [Draft 17](https://github.com/ocean-onion/In-Sync-OM-DEV/tree/main/drafts/0.4.*/draft17.py)
+
+</details>
+
+## Draft 18
+
+### 0.4.3
+---
+
+#### Key improvements:
+
+1. **Improved Game Flow**: Changed timing for different prompts
+2. **Added Show Function**: Add a new show code that allos users to see there cards before putting one down
+3. **Fixed Plain Game**: Fixed some bugs in plaingame.py like the invalid playername
+4. **Updated Test Function Game**: Updated testfunc.py to be compatible with new features and functions since 0.3.3
+5. **Added comments**: Add more comments to explain functionalbilty through out the program
+6. **Unified Documentation**:Moved all development infomation to this document alone
+### Complete Code for Draft 18
+
+<details>
+<summary>View Code</summary>
+
+[Draft 18](https://github.com/ocean-onion/In-Sync-OM-DEV/tree/main/drafts/0.4.*/draft18.py)
 
 </details>

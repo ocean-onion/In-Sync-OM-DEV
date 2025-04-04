@@ -3,8 +3,10 @@ from games.styledgame import BLUE, BOLD, DARKCYAN, END, GREEN, PURPLE, RED, YELL
 from games.testfunc import test_start_game
 from utils.logo import display_logo
 from utils.tools import execute_dev_command # remove in public
-from utils.utilities import clear, colourprint, colourprint_nl, loading_screen, typinginput, typingprint, wait, loading_files_screen, acceptable # remove in public
+from utils.utilities import clear, colourprint, colourprint_nl, loading_screen, typinginput, typingprint, wait, loading_files_screen, acceptabled, acceptableuk, acceptablel # remove in public
 from unused.test2 import test2 # remove in public
+from unused.test5 import test5 # remove in public
+from unused.test7 import test7 # remove in public
 
 
 def welcome():
@@ -74,10 +76,20 @@ def start_game():
     elif game_choose == "t": # remove in public
         clear()
         test_start_game()
-    elif game_choose in acceptable: # remove in public
+    elif game_choose in acceptabled: # remove in public
         clear()
         wait(0.5)
         test2()
+        hello()
+    elif game_choose in acceptableuk: # remove in public
+        clear()
+        wait(0.5)
+        test5()
+        hello()
+    elif game_choose in acceptablel: # remove in public
+        clear()
+        wait(0.5)
+        test7()
         hello()
     else:
         print("Invalid game choice.")

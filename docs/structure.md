@@ -20,7 +20,7 @@ In-Sync-DEV/
 │
 ├── drafts/               # Previous code versions
 │   ├── draft*.py         # Draft code verisons
-│   └── draft17.py        # Current implementation
+│   └── draft18.py        # Current implementation
 │
 │
 ├── games/                # Game implementations
@@ -64,24 +64,3 @@ In-Sync-DEV/
 - **docs/pseudocode.md**: Pseudocode for key functions
 - **docs/test_table.md**: Test cases and results
 - **docs/fixes/**: Documentation of bug fixes and improvements
-
-## Development History:
-
-The game has evolved through ten drafts, with each version improving on the previous one:
-1. **Draft 1**: Basic game mechanics
-2. **Draft 2**: Improved input validation
-3. **Draft 3**: Player privacy implementation
-4. **Draft 4**: Added helper functions
-5. **Draft 5**: Enhanced user interface
-6. **Draft 6**: Real-time game system
-7. **Draft 7**: Improved function naming
-8. **Draft 8**: Split into plain and styled versions
-9. **Draft 9**: Added developer commands
-10. **Draft 10**: Bug fixes and refactoring
-11. **Draft 11**: Refactoring and improved formatting
-12. **Draft 12**: Improved game flow and readability
-13. **Draft 13**: Improved developer tools and game flow
-14. **Draft 14**: Added welcome message and loading screens
-15. **Draft 15**: Added Logo and introduction, started unified game UI and improved game flow
-16. **Draft 16**: Improved game flow, UI readablitiy and updated plain game
-17. **Draft 17**: Added better error handling and improved game flow
