@@ -1,5 +1,6 @@
 
 # In Sync Game - Project Plan
+### *****All files in this file are required for the game to run properly*****
 
 ## 1. Project Pitch
 
