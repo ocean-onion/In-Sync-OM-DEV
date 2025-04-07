@@ -1,3 +1,4 @@
+# Made with love ❤️
 from games.plaingame import plain_start_game
 from games.styledgame import BLUE, BOLD, DARKCYAN, END, GREEN, PURPLE, RED, YELLOW, styled_start_game
 from games.testfunc import test_start_game
