@@ -313,6 +313,7 @@ def restart_game():
     else:
         typingprint(f"{GREEN}{BOLD}Thanks for playing!{END}")
 
+'''This function starts the game loop ad creates the amount of players for the game and deals the cards to the players.''' # remove in public
 
 def styled_start_game():
     clear()

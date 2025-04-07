@@ -2,7 +2,7 @@
 import sys
 from utils.utilities import color, colourprint, typingprint, clear, typinginput
 
-
+'''This functions takes the command that is input and then checks what command it is and then runs the function that is associated with it.''' # remove in public
 def execute_dev_command(command, players, played_cards):
     if command == "players":
         players_list(players)

@@ -8,6 +8,7 @@
 *.so
 
 # Distribution / packaging
+.egg-info
 .Python
 build/
 develop-eggs/

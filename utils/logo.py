@@ -57,6 +57,7 @@ logo = """                                    @@@@@@@@@@@@@@@@@@@@@@@@@@@@
                                     @@@@@@@@@@@@@@@@@@@@@@@@@@@@                                    """
 
 colored_logo = ""
+'''This for loop goes through each character in the logo and checks if it is one of the characters that need to be colored. If it is, it adds the colored version of the character to the colored_logo string. If it isn't, it just''' # remove in public
 for char in logo:
     if char == '@':
         colored_logo += f"{color.DARKBLUE}@{color.END}"

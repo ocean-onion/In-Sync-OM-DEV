@@ -108,8 +108,7 @@ def introduction():
 
 
 def hello():
-    print("Hello, would you like the introduction (y/n)")
-    skip_intro = input().lower()
+    skip_intro = input("Hello, would you like the introduction (y/n) ").lower()
     if skip_intro.startswith("!?"): # remove in public
         command = skip_intro[2:]
         execute_dev_command(command, [], [])

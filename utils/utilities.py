@@ -66,6 +66,7 @@ def clear():
 def wait(seconds):
     time.sleep(seconds)
 
+'''The functions with _nl mean that the function will not print a new line at the end of the function. Which can be used to make the different text statements appear on the same line.''' # remove in public
 
 def typingprint(text):
     text = apply_colors(text)
@@ -352,7 +353,7 @@ def plain_instructions():
     input("\nPress Enter to continue...")
     return
 
-
+'''These functions put these print statements in a for loop to create a loading screen effect.''' # remove in public
     
 def loading_screen():
     for i in range(1, 4):
