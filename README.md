@@ -1,6 +1,8 @@
 
 # In Sync Game
 
+### *****All files in this file are required for the game to run properly*****
+
 ### 0.4.3
 ---
 
