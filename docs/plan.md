@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-"In Sync" is a joint effort card game where players must work together to play cards in ascending order without communicating. This digital implementation aims to capture the idea of the physical game (The Mind) while adding digital enhancements.
+"In Sync" is a joint effort card game where players must work together to play cards in ascending order without talking. This aims to capture the idea of the physical card game (The Mind) while adding some enhancements.
 
 ## Core Features (Implemented)
 

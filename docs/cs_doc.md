@@ -5,7 +5,7 @@
 ## 1. Project Pitch
 
 ### Game Idea
-"In Sync" is a cooperative card game where players work together to play their cards in ascending order, without communicating. Each player is handed cards with numbers ranging from 1 to 70. Before the game begins, a random selection of cards is removed from the deck, making it impossible to know exactly which numbers are in play. Players must rely on intuition and timing to play their cards in the correct order without discussing their hands or giving any hints.
+"In Sync" is a team card game where players work together to play their cards in ascending order, without talking. Each player is handed cards with numbers ranging from 1 to 70. Before the game begins, a random selection of cards is removed from the deck, making it impossible to know exactly which numbers are in play. Players must rely on intuition and timing to play their cards in the correct order without discussing their hands or giving any hints.
 
 ### Rules
 1. Players are dealt cards from a deck numbered 1-70 (with some cards randomly removed)
@@ -131,23 +131,10 @@ Actual:
 
 ## 6. Evaluation
 
-1. **What worked well?**
-- Creating the players and dealing the cards worked well. Once I organized the code more clearly, the game started to make more sense. The real-time gameplay also worked well in the end, especially after I separated things better.
-
-2. **What was challenging?**
-- One of the biggest challenges was checking for the correct cards and players. It made the code messy and hard to understand at first, but I was able to organise it better eventually by splitting it up more. Making the real-time gameplay was also difficult at the beginning.
-
-3. **Did you follow your plan successfully?**
-- I didn’t follow my plan completely. I realized that my game wouldn’t work in a turn-based format, which led me to completely overhaul a lot of the game. This was because my game relies heavily on the idea that some people have the two next-lowest cards, which is meant to confuse the players and raise the stakes. Switching to real-time gameplay, where users can play their cards whenever they want, worked much better.
-
-4. **What would you do differently if you started over?**
-- If I started over, I would do user testing earlier. I would also add more comments in the code to help myself stay on track, because I often found myself getting lost in it.
-
-5. **How confident are you now with functions and lists?**
-- I now feel confident using lists and functions, as I used them somewhat effectively in my program. There’s still room for improvement in my code, but I’m happy with where it is now compared to where it started.
+The dealings with the cards and creating the players worked well, it was simple enough for me to do initially. One of the things that was difficult was that I ran into many syntax errors which I didn't understand, such as circular imports that I need to research and understand a bit more. It also didn't help that my code was a bit of a mess to begin with. When I first made my plan, I had thought it to be a turn-based game which was a mistake as this would make the game unwinable. So I needed to change the gameplay completely so that they could plan at any time they want. If I were to start over, I would think about how the gam would work. And look at the source game (The Mind) a bit more. I would also have played and tested it past the first turn earlier to check the whole functionality. Now, after making my program, I am more confident with parameters and arguments compared to how I used to use functions when I used them to print out different parts of text or import new parts of a program. 
 
 
-## 8. Tools Required
+## 7. Tools Required
 
 - Python 3.11
 - Built-in Python libraries:
@@ -156,7 +143,7 @@ Actual:
   - sys (for display functions)
   - os (for clearing the screen)
 
-## 9. Documentation
+## 8. Documentation
 - [Full Documents Folder](https://github.com/ocean-onion/In-Sync-OM-DEV/tree/main/docs)
 - [Overview](https://github.com/ocean-onion/In-Sync-OM-DEV/blob/main/README.md)
 - [Fixes](https://github.com/ocean-onion/In-Sync-OM-DEV/blob/main/docs/fixes/fixes.md)
@@ -166,5 +153,5 @@ Actual:
 - [Project Structure](https://github.com/ocean-onion/In-Sync-OM-DEV/blob/main/docs/structure.md)
 - [Test Table](https://github.com/ocean-onion/In-Sync-OM-DEV/blob/main/docs/test_table.md)
 
-## 10. License
+## 9. License
 - [MIT License](https://github.com/ocean-onion/In-Sync-OM/blob/main/LICENSE)

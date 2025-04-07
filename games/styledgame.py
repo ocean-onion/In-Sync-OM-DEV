@@ -22,7 +22,7 @@ END = color.END
 
 
 def prepare_game_deck(num_players):
-    '''Takes the deck of cards from utilites shuffles it then it removes a random amount (between 25 and 55) of cards from it.'''  # remove in public
+    '''Takes the deck of cards from utilites shuffles it then it removes a random amount (between 25 and 55) of cards from it. I also know there is better way to do this but I am too far deep.'''  # remove in public
     total_cards = len(cards)
     cards_to_remove = random.randint(25, 55)
     available_cards = total_cards - cards_to_remove
